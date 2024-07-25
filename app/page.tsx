@@ -12,9 +12,8 @@ export default function Chat() {
   }, [messages]);
 
   return (
-<div style={{ backgroundImage: `url('/bgkirsh.jpg')`, height: '100vh', backgroundSize: 'cover', backgroundPosition: 'center' }}>    <div className="flex flex-col w-full max-w-md h-screen mx-auto py-24 stretch bg-gray-100">
-      <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch bg-cover bg-center">
-        <h1 className="text-4xl font-bold text-center">Krish-AI </h1>
+    <div className="flex flex-col w-full max-w-md h-screen mx-auto py-24 stretch bg-gray-100">
+      <div className="flex-grow overflow-y-auto p-4">
         {messages.map(m => (
           <div
             key={m.id}
@@ -39,6 +38,6 @@ export default function Chat() {
         <button type="submit" className="p-2 bg-blue-500 text-white rounded shadow-md">Send</button>
       </form>
     </div>
-    </div>
+
   );
 }
